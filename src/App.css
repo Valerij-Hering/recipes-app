@@ -1,38 +1,213 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ecf0f3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-form {
+  background-color: #6acc01;
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  background: linear-gradient(to bottom, #f7f7f7 0%,#e5e5e5 100%);
+  width: 100%;
+  padding: 13px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  width: 565px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 0 10px;
+  box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+  -webkit-box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+}
+
+input {
+  width: 530px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: rgb(132, 132, 132);
+  -webkit-appearance: none;
+}
+
+.input-btn {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+  color: rgb(132, 132, 132);
+}
+
+h1 {
+  margin-top: 100px;
+  margin-bottom: -100px;
+  font-size: 42px;
+}
+
+/* RecipesComponent************************************************************************************************************************ */
+
+.container-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  width: 80%;
+}
+
+
+.recipe-label {
+  color: #222;
   text-align: center;
+  font-size: 21px;
+  font-weight: 800;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+    border-radius: 10px;
+    box-shadow:4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
+    width: 500px;
+    margin: 20px;
+    margin-top: 200px;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.recipe-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
+  margin-top: -100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.recipe-calories {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background-color: #6acc01;
+  padding: 10px 30px;
+  border-radius: 7px;
+  background: linear-gradient(to bottom,  #8fe21b 0%,#6cb30a 100%); /* W3C */
+	font: bold 18px Arial;
+	text-shadow: 0px -1px 0px #4C7B0C;
+	color: #FFF;
+	border-color: #999;
+}
+
+.box-recipe-igredients {
+  width: 100%;
+}
+
+.box-ul {
+  background-color:#fefeff;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 10px;
+  box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+}
+
+.recipe-igredients {
+  width: 400px;
+  height: 250px;
+  overflow-y: auto;
+  flex-wrap: nowrap; 
+  text-align: center;
+}
+
+.recipe-igredients::-webkit-scrollbar {
+  display: none; 
+
+}
+
+.ingredient {
+  color: #6f6f6f;
+  font-size: 15px;
+  margin-top: 2px;
+  font-weight: 400;
+}
+
+.ingredientsLength {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #3a3a3a;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+  background-color: #6acc01;
+  border-radius: 10px;
   color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+@media all and (max-width: 800px) {
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 500px) {
+  .box-info {
+      width: 100%;
+      padding: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container-recipes {
+    width: 100%;
+  }
+
+
+  .recipe-igredients {
+    margin-left: 0px;
+  }
+
+  .input-form {
+    width: 80%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .recipe-igredients {
+    width: 100%;
   }
 }
