@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import RecipesComponent from './RecipesComponent';
+import icon from './icon.png';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
 
   const [search, setSearch] = useState('');
   const [recipes, setRecipes] = useState([]);
-  const [wordSubmitted, setWordSubmitted] = useState();
+  const [wordSubmitted, setWordSubmitted] = useState('avocado');
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -34,6 +35,7 @@ function App() {
   return (
     <div className="container">
       <div className='container-form'>
+        
         <div className='input-form'>
           <form onSubmit={finalSearch}>
             <input onChange={recipesSearch} value={search} placeholder="Search..."/>
@@ -41,6 +43,7 @@ function App() {
           <button className='input-btn'><i className='fas	fa-search'></i></button>
         </div>
       </div>
+      <img src={icon} className='icon' alt="icon"/>
       <h1>Recipes</h1>
       <div className='container-recipes'>
         {recipes.map((element, index) =>(
@@ -53,6 +56,8 @@ function App() {
           ingredientsList = {element.recipe.ingredientLines.length}/>
         ))}
       </div>
+
+      <div className='footer'></div>
     </div>
   );
 }
