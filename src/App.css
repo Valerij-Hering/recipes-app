@@ -42,12 +42,12 @@ body {
 
 input {
   width: 500px;
-
-  padding: 10px 20px;
+  font-size: 16px;
+  padding: 7px 20px;
   border: none;
   outline: none;
   background-color: #fff;
-  color: rgb(132, 132, 132);
+  color: rgb(48, 48, 48);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   -webkit-appearance: none;
@@ -87,6 +87,8 @@ h1 {
   position: absolute;
   z-index: -1;
 }
+
+
 
 /* RecipesComponent************************************************************************************************************************ */
 
@@ -134,7 +136,7 @@ h1 {
   text-align: center;
   background-color: #6acc01;
   padding: 10px 30px;
-  border-radius: 7px;
+  border-radius: 10px;
   background: linear-gradient(to bottom,  #8fe21b 0%,#6cb30a 100%); /* W3C */
 	font: bold 18px Arial;
 	text-shadow: 0px -1px 0px #4C7B0C;
@@ -155,11 +157,13 @@ h1 {
   justify-content: center;
   border-radius: 30px;
   box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+  
+  
 }
 
 .recipe-igredients {
   width: 400px;
-  height: 250px;
+  height: 150px;
   overflow-y: auto;
   flex-wrap: nowrap; 
   text-align: center;
@@ -171,7 +175,7 @@ h1 {
 }
 
 .ingredient {
-  color: #6f6f6f;
+  color: #3a3a3a;
   font-size: 15px;
   margin-top: 2px;
   font-weight: 400;
@@ -200,10 +204,127 @@ h1 {
   height: 60px;
   background-color: #e6e6e6;
   border-top: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media all and (max-width: 800px) {
+.footerPar {
+  color: rgb(128, 128, 128);
+  font-size: 14px;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px white;
+}
 
+.container-recipes-info {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.subcontainer-recipes-info {
+  background-color: #efeff3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 27px;
+  height: 100px;
+  padding: 3px;
+}
+
+.callInfo {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.callInfo p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cal-name {
+   width: 50px;
+   height: 50px;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-name span {
+  font-size: 13px;
+  color: #9d9d9f;
+}
+
+.box-cookingTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookingTime {
+  text-align: center;
+  color: #9d9d9f;
+  vertical-align: middle;
+}
+
+.cookingTime span {
+  color: rgb(189, 0, 0);
+}
+
+.box-link {
+  display: flex;
+  justify-content: center;
+}
+
+.box-link a {
+  color: #9d9d9f;
+  font-size: 13px;
+}
+
+.box-link a:hover {
+  color: #81c741;
+}
+
+.box-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media all and (max-width: 1200px) {
+  .container-recipes {
+    margin: 100px auto;
+    margin-right: 0px;
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .container-recipes {
+    margin: 100px auto;
+    margin-right: 0px;
+  }
+}
+
+@media all and (max-width: 630px) {
+  .input-form {
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 @media all and (max-width: 500px) {

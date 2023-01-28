@@ -43,8 +43,10 @@ function App() {
           <button className='input-btn'><i className='fas	fa-search'></i></button>
         </div>
       </div>
-      <img src={icon} className='icon' alt="icon"/>
-      <h1>Recipes</h1>
+      <div className='box-icon'>
+        <img src={icon} className='icon' alt="icon"/>
+        <h1>Recipes</h1>
+      </div>
       <div className='container-recipes'>
         {recipes.map((element, index) =>(
           <RecipesComponent
@@ -53,11 +55,18 @@ function App() {
           image = {element.recipe.image}
           calories = {element.recipe.calories}
           igredients = {element.recipe.ingredientLines}
-          ingredientsList = {element.recipe.ingredientLines.length}/>
+          ingredientsList = {element.recipe.ingredientLines.length}
+          link = {element.recipe.url}
+          protein = {element.recipe.digest[2].total}
+          fat = {element.recipe.digest[0].total}
+          carbs = {element.recipe.digest[1].total}
+          totalTime = {element.recipe.totalTime}/>
         ))}
       </div>
 
-      <div className='footer'></div>
+      <div className='footer'>
+        <p className='footerPar'>All material used for educational purposes.</p>
+      </div>
     </div>
   );
 }
