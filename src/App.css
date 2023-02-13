@@ -96,7 +96,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin: 100px auto;
-  width: 80%;
+  width: 78%;
 }
 
 
@@ -114,16 +114,16 @@ h1 {
   align-items: center;
   background-color: #fff;
     border-radius: 30px;
-    box-shadow:4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
-    width: 500px;
-    margin: 20px;
+    box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.135);
+    width: 450px;
+    margin: 40px;
     margin-top: 200px;
     padding: 10px;
 }
 
 .recipe-image {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 30px;
   box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
   margin-top: -100px;
@@ -145,7 +145,7 @@ h1 {
 }
 
 .box-recipe-igredients {
-  width: 100%;
+  width: 80%;
 }
 
 .box-ul {

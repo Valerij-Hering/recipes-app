@@ -4,24 +4,10 @@ function RecipesComponent(props) {
                     <a href={props.link}>
                         <img src={props.image} alt="recipe" className="recipe-image"/>
                     </a>
-                    
-                    {/* <button className="btn-add">Add</button> */}
                     <br/>
                     <br/>
                 <div className="box-recipe-igredients">
                         <p className="recipe-label">{props.label}</p>
-                    
-                        {/* <p className="recipe-calories">{props.calories.toFixed()} calories</p> */}
-                    <br/>
-                        {/* <p className="ingredientsLength">{props.ingredientsList} Ingredients</p>
-                    <div className="box-ul">
-                        <div className="recipe-igredients">
-                            <br/>
-                            {props.igredients.map((ingredient, index) => (
-                                <p key={index} className="ingredient">{ingredient}</p>
-                            ))}
-                        </div>
-                    </div> */}
                     <br/>
                     <div className="container-recipes-info">
                         <div className="subcontainer-recipes-info">
@@ -62,7 +48,6 @@ function RecipesComponent(props) {
                     </div>
                     <br/>
                     <br/>
-                    {/* <p className="cookingTime">cooking time: <span>  {props.totalTime} min</span></p> */}
                     <div className="box-link">
                         <a href={props.link} target="blank">Sources of recommendations</a>
                     </div>
