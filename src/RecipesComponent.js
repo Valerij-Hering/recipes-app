@@ -1,6 +1,6 @@
 function RecipesComponent(props) {
     return(
-            <div className="box-info">
+            <div className="box-info blank animate__animated  animate__fadeInUp">
                     <a href={props.link}>
                         <img src={props.image} alt="recipe" className="recipe-image"/>
                     </a>
@@ -48,7 +48,7 @@ function RecipesComponent(props) {
                     </div>
                     <br/>
                     <br/>
-                    <div className="box-link">
+                    <div className="box-link ">
                         <a href={props.link} target="blank">Sources of recommendations</a>
                     </div>
                     <br/>

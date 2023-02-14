@@ -40,7 +40,7 @@ function App() {
           <form onSubmit={finalSearch}>
             <input onChange={recipesSearch} value={search} placeholder="Search..."/>
           </form>
-          <button className='input-btn'><i className='fas	fa-search'></i></button>
+          <button onClick={finalSearch} className='input-btn'><i className='fas	fa-search'></i></button>
         </div>
       </div>
       <div className='box-icon'>
